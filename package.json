@@ -1,0 +1,17 @@
+{
+  "name": "demoexpress",
+  "version": "1.0.0",
+  "description": "Mi primer servidor en Node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hans",
+  "license": "ISC",
+  "dependencies": {
+    "cowsay": "^1.6.0",
+    "express": "^4.21.1",
+    "install": "^0.13.0",
+    "pg": "^8.13.0"
+  }
+}
