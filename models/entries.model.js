@@ -59,7 +59,7 @@ const createEntry = async (entry) => {
     return result
 }
 
-// DELETE
+//DELETE
 //UPDATE
 
 const entries = {
