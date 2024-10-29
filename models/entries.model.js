@@ -4,7 +4,7 @@ const queries = require('./queries') // Queries SQL
 const pool = new Pool({
     host: 'localhost',
     user: 'postgres',
-    port: '5432',   //Por defecto, 5432
+    port: '5432',   //Por defecto, 5432 
     database: 'postgres',
     password: '123456'
   });
@@ -95,5 +95,5 @@ let newEntry = {
 // createEntry(newEntry)
 //     .then(data => console.log(data)) 
 
-    getEntriesByEmail("guillermu@thebridgeschool.es")
-        .then(data=>console.log(data))
+    // getEntriesByEmail("guillermu@thebridgeschool.es")
+    //     .then(data=>console.log(data))
