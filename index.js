@@ -13,8 +13,8 @@ app.use(express.json());   // ! AL INICIO DE LA HOJA, configuracion de express p
 
 // Rutas
 const booksRoutes = require("./routes/books.routes")
-const productsRoutes = require("./routes/products.routes")
-const entriesRoutes = require("./routes/entries.routes")
+const productsRoutes = require("./routes/products_old.routes")
+const entriesRoutes = require("./routes/entries.routes")    
 
 
 app.get('/', function (req, res) {
