@@ -4,7 +4,9 @@
   "description": "Mi primer servidor en Node",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "author": "Hans",
   "license": "ISC",
@@ -17,6 +19,7 @@
     "pug": "^3.0.3"
   },
   "devDependencies": {
+    "jest": "^29.7.0",
     "morgan": "^1.10.0",
     "nodemon": "^3.1.7"
   }

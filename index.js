@@ -17,7 +17,7 @@ app.set('view engine', 'pug');
 app.set('views','./views');
 
 // Rutas
-const booksRoutes = require("./routes/books.routes")
+const booksRoutes = require("./routes/books.routes")    
 const productsRoutes = require("./routes/products_old.routes")
 const entriesRoutes = require("./routes/entries.routes")    
 
