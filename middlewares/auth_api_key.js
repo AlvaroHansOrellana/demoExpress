@@ -1,4 +1,23 @@
-//GET http://localhost:3000/api/books?API_KEY=123abc
+/**
+ * @author Alejandro Reyes <alejandroreyes.com> 
+ * @exports checkApiKey
+ * @namespace middlewares
+ */
+
+
+/**
+  * Función para comprobar si tiene API KEY
+  * <pre>
+  * Ejemplo:
+  * GET http://localhost:3000/products?API_KEY=123abc
+  * </pre>
+  * @memberof middlewares 
+  * @method checkApiKey 
+  * @param {Object} req objeto de petición HTTP
+  * @param {Object} res objeto de respuesta HTTP
+  * @param {Object} next función que pasa a siguiente estado si la comprobación es correcta 
+  * @throws {error} API KEY no proveída o errónea
+  */
 
 const checkApiKey = function (req, res, next) {
     // Comprobar si existe API KEY en BBDD pasada por cliente
@@ -13,3 +32,4 @@ const checkApiKey = function (req, res, next) {
 }
 
 module.exports = checkApiKey;
+

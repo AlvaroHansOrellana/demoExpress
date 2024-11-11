@@ -1,6 +1,8 @@
 const express = require('express') // Importa la libreria  (paquete)
 const app = express() // Inicializar el servidor con express, variable app representa el servidor
 const port = 3000 // Puerto a usar
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
 
 // importar middlewares
 
@@ -15,6 +17,9 @@ app.use(express.static('public'))
 //Motor de plantillas  PUG
 app.set('view engine', 'pug');
 app.set('views','./views');
+
+// Swagger Documentacion
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // Rutas
 const booksRoutes = require("./routes/books.routes")    
@@ -37,7 +42,6 @@ app.get("/perros/:name?", checkApiKey, function (req, res) {
 app.get('/books', function (req, res) {
     res.send('Hello World')
 });
-
 
 
 // Rutas
@@ -72,8 +76,14 @@ app.use("*", manage404); // Usar este cuando haya un middleware activado
 // });
 
 
+// // !     Para "llamar" al puerto, siempre necesario 
+// app.listen(port, () => {                                                 BEFORE!! 
+//     console.log(`Example app listenig on http://localhost:${port}`)
+// });
 
 // !     Para "llamar" al puerto, siempre necesario
-app.listen(port, () => {
+const server = app.listen(port, () => {
     console.log(`Example app listenig on http://localhost:${port}`)
 });
+
+module.exports = server;
